@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function pallindrom(){
+            var num = document.getElementById("txtNum").value;
+            var sum=0, r, temp;
+            temp = num;
+            while(num){
+                r = num % 10;
+                sum = sum * 10 + r;
+                num = parseInt(num / 10);
+            }
+            if(temp == sum){
+                   console.log("It is pallindrom")
+               } else {
+                   console.log("not pallindrom");
+               }
+        }
+        </script>
+</head>
+<body>
+    
+    <div>
+        <input type="text" id="txtNum">
+        <button onclick="pallindrom()">Click</button>
+       
+    </div>
+
+    
+</body>
+</html>
